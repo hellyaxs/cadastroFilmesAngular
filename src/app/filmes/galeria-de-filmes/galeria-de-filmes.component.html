@@ -1,0 +1,36 @@
+
+<form action="" [formGroup]="filtroFilmes">
+  <div class="row">
+    <div class="col-6 m-3">
+      <app-input-text ControlName="texto"
+                      [formGroup]="filtroFilmes"
+                      titulo="pequise aqui">
+      </app-input-text>
+    </div>
+    <div class="col-6 m-3">
+      <app-input-select controlName="genero"
+                        [formGroup]="filtroFilmes"
+                        titulo="selecione genero"
+                        [opcoes]="generos">
+    </app-input-select>
+    </div>
+  </div>
+
+</form>
+
+<div class="container">
+<div class="row" (scrolled)="onScroll()" infiniteScroll>
+      <div class="col-6"  *ngFor="let LiFilmes of LiFilmes">
+          <div class="card mb-4">
+      <img [src]="LiFilmes.urlFoto" class="card-img-top" alt="..." >
+              <div class="card-body">
+                <h5 class="card-title">{{LiFilmes.titulo}}</h5>
+                <p class="card-text">{{LiFilmes.descricao}}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+      </div>
+
+     
+  </div>
+</div>
