@@ -1,36 +1,46 @@
-
-<form action="" [formGroup]="filtroFilmes">
-  <div class="row">
-    <div class="col-6 m-3">
-      <app-input-text ControlName="texto"
-                      [formGroup]="filtroFilmes"
-                      titulo="pequise aqui">
-      </app-input-text>
-    </div>
-    <div class="col-6 m-3">
-      <app-input-select controlName="genero"
+  
+  <form [formGroup]="filtroFilmes" class="bg-primary p-2 mb-2">
+    <div class="row container">
+      <div class="col-6">
+        <app-input-text ControlName="texto"
                         [formGroup]="filtroFilmes"
-                        titulo="selecione genero"
-                        [opcoes]="generos">
-    </app-input-select>
+                        titulo="pequise aqui">
+        </app-input-text>
+      </div>
+      <div class="col-6">
+        <app-input-select controlName="genero"
+                          [formGroup]="filtroFilmes"
+                          titulo="selecione genero"
+                          [opcoes]="generos">
+      </app-input-select>
+      </div>
     </div>
-  </div>
+  </form>
 
-</form>
 
 <div class="container">
-<div class="row" (scrolled)="onScroll()" infiniteScroll>
-      <div class="col-6"  *ngFor="let LiFilmes of LiFilmes">
+<div class="row" (scrolled)="onScroll()" infiniteScroll *ngIf="LiFilmes.length; else semRegistro">
+      <div class="col-sm-12 col-md-6 col-lg-4"  *ngFor="let LiFilmes of LiFilmes">
           <div class="card mb-4">
-      <img [src]="LiFilmes.urlFoto" class="card-img-top" alt="..." >
+      <img [src]="LiFilmes.urlFoto || semFoto" class="card-img-top" alt="..." >
               <div class="card-body">
-                <h5 class="card-title">{{LiFilmes.titulo}}</h5>
-                <p class="card-text">{{LiFilmes.descricao}}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h2 class="card-title">{{ LiFilmes.titulo }}</h2>
+                <p class="card-text">{{ LiFilmes.descricao || 'sem descricao'}}</p>
+                <p class="card-text">{{ LiFilmes.genero }}</p>
+                <a class="btn btn-primary" (click)="visualizarF(LiFilmes.id)">learn more</a>
               </div>
             </div>
       </div>
-
      
   </div>
+
+  <ng-template #semRegistro>
+    <div class="jumbotron jumbotron-fluid bg-secondary text-light">
+      <div class="container">
+        <h1 class="display-4">Nenhum Registro encontrado</h1>
+        <p class="lead">Tente procurar por outros filmes</p>
+      </div>
+      <hr class="my-4">
+    </div>
+  </ng-template>
 </div>

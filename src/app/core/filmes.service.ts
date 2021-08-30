@@ -2,6 +2,8 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Filmes } from '../share/models/filmes';
+import { ParamsConfig } from '../share/models/params-config';
+import { ConfigParamsService } from './config-params.service';
 
  const baseD= 'http://localhost:3000/filmes/';
 
@@ -11,18 +13,27 @@ import { Filmes } from '../share/models/filmes';
 
 export class FilmesService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,
+              private configParams:ConfigParamsService) { }
 
    salvar(filmes: Filmes): Observable<Filmes>{
      return this.http.post<Filmes>(baseD,filmes);
    }
+   
+   editar(filme:Filmes):Observable<Filmes>{
+     return this.http.put<Filmes>(baseD + filme.id, filme)
+   }
 
-   listarfilmes(pagina:number, limite:number): Observable<Filmes[]>{
+   listarfilmes(config:ParamsConfig): Observable<Filmes[]>{
+    const configParams = this.configParams.ConfiguraParams(config);
+    return this.http.get<Filmes[]>(baseD,{params: configParams});
+   }
 
-    let parametros = new HttpParams();
+   vusualizarFilmes(id:number):Observable<Filmes>{
+     return this.http.get<Filmes>(baseD + id);
+   }
 
-    parametros = parametros.set('_page',pagina.toString());
-    parametros = parametros.set('_limit',limite.toString());
-    return this.http.get<Filmes[]>(baseD);
+   excluir(id:number):Observable<void>{
+      return this.http.delete<void>(baseD + id);
    }
 }

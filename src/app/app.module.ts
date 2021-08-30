@@ -15,6 +15,8 @@ import { CamposModule } from './share/campos/campos.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './share/modal/modal.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { StarModulesModule } from './share/star/star-modules.module';
+import { VisualizarFilmesComponent } from './filmes/visualizar-filmes/visualizar-filmes.component';
 
 
 
@@ -26,7 +28,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     GaleriaDeFilmesComponent,
     CadastroFilmesComponent,
     ModalComponent,
-
+    VisualizarFilmesComponent
+    
   ],
   imports: [
     CommonModule, 
@@ -38,7 +41,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     FormsModule,
     CamposModule,
     HttpClientModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    StarModulesModule
 
   ],
   entryComponents:[ModalComponent],

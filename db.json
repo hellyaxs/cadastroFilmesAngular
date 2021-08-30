@@ -111,24 +111,44 @@
       "id": 11
     },
     {
-      "titulo": "the tomorrow war",
-      "urlFoto": "foto img para teste.com /br",
-      "DatadeLançamento": "2019-11-20T03:00:00.000Z",
+      "titulo": "the tomorrow war 2",
+      "urlFoto": "https://imagens.publicocdn.com/imagens.aspx/766301?tp=KM&w=220",
+      "dtLancamento": "2019-11-20T03:00:00.000Z",
       "descricao": "novo conteudo de text para tests",
-      "NotaIMDb": 8,
+      "nota": 8,
       "urlIMDb": "",
-      "genero": "terror",
+      "genero": "Terror",
       "id": 13
     },
     {
       "titulo": "Homem-Aranha: Sem Volta Para Casa",
       "urlFoto": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRov1pCMql1I40EOHP6c8D5dTYhbWoiAsdnIjUnXHE8awwmtx_u",
-      "DatadeLançamento": "2021-08-01T03:00:00.000Z",
+      "dtLancamento": "2021-08-01T03:00:00.000Z",
       "descricao": "Uma seqüência para o Homem-Aranha longe de casa.",
-      "NotaIMDb": 9,
+      "nota": 9,
       "urlIMDb": "https://www.imdb.com/title/tt10872600/?ref_=tt_mv_close",
-      "genero": "aventura",
+      "genero": "Aventura",
       "id": 14
+    },
+    {
+      "titulo": "Os Minions",
+      "urlFoto": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRmPBDQGmK4gy3VbSjJlOEjukI12Q9Da81qZIUusQdHHAktnkjP",
+      "dtLancamento": "2018-02-05T03:00:00.000Z",
+      "descricao": "Os minions o Stuart, o Kevin e o Bob são recrutados por Scarlet Overkill, uma supervilã quem junto com seu marido inventor, Herb, cria um plano para dominar o mundo",
+      "nota": 8.5,
+      "urlIMDb": "",
+      "genero": "Comédia",
+      "id": 15
+    },
+    {
+      "titulo": "Death Note",
+      "urlFoto": "https://cdn.culturagenial.com/imagens/death-note-cartaz.jpg",
+      "dtLancamento": "2018-11-15T03:00:00.000Z",
+      "descricao": "Death Note é uma série de mangá escrita por Tsugumi Ohba e ilustrada por Takeshi Obata. Os capítulos do mangá foram serializados na revista semanal japonesa Weekly Shōnen Jump de 2003 até 2006, com os capítulos compilados em um total de 12 volumes tankōbon e lançados pela editora Shueisha.",
+      "nota": 7.6,
+      "urlIMDb": "",
+      "genero": "Ficção cientifica",
+      "id": 19
     }
   ]
 }

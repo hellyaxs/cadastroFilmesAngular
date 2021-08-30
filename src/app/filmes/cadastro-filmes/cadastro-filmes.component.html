@@ -1,4 +1,4 @@
-<form [formGroup]="cadastro" (ngSubmit)="salvar()" (ngReset)="reiniciarForm()" >
+<form [formGroup]="cadastro" (ngSubmit)="salvar()" (ngReset)="reiniciarForm()" *ngIf="cadastro">
     <div class="container">
       
         <app-input-text [formGroup]="cadastro"ControlName="titulo" titulo="Titulo *"></app-input-text>
@@ -10,7 +10,7 @@
         <mat-error *ngIf="validation.hasErrorValidation(f.LinkFoto,'minlength')">maximo de 10 caracteres</mat-error>
     </mat-form-field>-->
 
-    <app-input-date [formGroup]="cadastro" controlName="DatadeLançamento" titulo="Data de Lançamento *"></app-input-date>
+    <app-input-date [formGroup]="cadastro" controlName="dtLancamento" titulo="Data de Lançamento *"></app-input-date>
    
 
   <!--  <mat-form-field class="full-width">
@@ -21,7 +21,7 @@
 
     <app-input-text [formGroup]="cadastro" ControlName="descricao" titulo="Descricao"></app-input-text>
 
-    <app-input-number [formGroup]="cadastro" ControlName="NotaIMDb" tituloPlacehouder="Nota IMDb *" [contador]="0.1"></app-input-number>
+    <app-input-number [formGroup]="cadastro" ControlName="nota" tituloPlacehouder="Nota IMDb *" [contador]="0.1"></app-input-number>
 
   <!-- <mat-form-field class="full-width">
         <mat-label>Nota IMDb *</mat-label>

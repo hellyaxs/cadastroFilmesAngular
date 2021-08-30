@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CadastroFilmesComponent } from './cadastro-filmes.component';
 
 describe('CadastroFilmesComponent', () => {

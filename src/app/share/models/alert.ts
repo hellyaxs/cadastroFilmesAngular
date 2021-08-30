@@ -1,9 +1,12 @@
 export interface Alert {
     titulo?:string,
     descricao?:string,
-    Close?:boolean,
-    Save?:boolean,
     possuiFechar?:boolean,
+    corBtnSave:string,
+    SaveValue:boolean,
+    CloseValue:boolean,
     corBtnCancelar:string,
     possuiSave:boolean,
+    BtnText?:string,
+    BtnTextClose?:string
 }

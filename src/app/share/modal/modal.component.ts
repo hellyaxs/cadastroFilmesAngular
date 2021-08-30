@@ -13,11 +13,14 @@ export class ModalComponent implements OnInit {
 
   titulo:'SUCESSO!!!',
   descricao:'Seu cadatro foi realizado com sucesso',
-  Close:false,
-  Save:true,
   possuiFechar:false,
   possuiSave:true,
-  corBtnCancelar:'btn btn-primary'
+  SaveValue:true,
+  CloseValue:false,
+  corBtnSave:'btn btn-danger',
+  corBtnCancelar:'btn btn-primary',
+  BtnTextClose:'Cancelar',
+  BtnText:'Ok'
 
 } as Alert
 
@@ -28,11 +31,12 @@ export class ModalComponent implements OnInit {
     if (this.data) {
       this.Alert.titulo = this.data.titulo || this.Alert.titulo;
       this.Alert.descricao = this.data.descricao || this.Alert.descricao;
-      this.Alert.Close = this.data.Close || this.Alert.Close;
-      this.Alert.Save = this.data.Save || this.Alert.Save;
       this.Alert.possuiSave = this.data.possuiSave || this.Alert.possuiSave;
       this.Alert.possuiFechar = this.data.possuiFechar || this.Alert.possuiFechar;
       this.Alert.corBtnCancelar = this.data.corBtnCancelar || this.Alert.corBtnCancelar;
+      this.Alert.corBtnSave = this.data.corBtnSave || this.Alert.corBtnSave;
+      this.Alert.BtnTextClose = this.data.BtnTextClose || this.Alert.BtnTextClose;
+      this.Alert.BtnText = this.data.BtnText || this.Alert.BtnText;
      
     }
 

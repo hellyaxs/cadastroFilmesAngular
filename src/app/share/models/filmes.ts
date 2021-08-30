@@ -1,10 +1,10 @@
 export interface Filmes {
-      id?: number,
+      id:number,
       titulo:string ,
-      urlFoto?: string,
-      DatadeLançamento: Date,
+      urlFoto:string,
+      dtLancamento: Date,
       descricao: string,
-      NotaIMDb: number,
+      nota: number,
       urlIMDb:string,
       genero: string
 
