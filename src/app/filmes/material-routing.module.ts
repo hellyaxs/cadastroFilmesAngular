@@ -5,7 +5,7 @@ import { GaleriaDeFilmesComponent } from './galeria-de-filmes/galeria-de-filmes.
 import { CadastroFilmesComponent } from './cadastro-filmes/cadastro-filmes.component';
 
 const routes:Routes = [
-     { path:'', redirectTo:'filmes'},
+     
       {
         path: '',
         component: GaleriaDeFilmesComponent
