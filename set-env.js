@@ -5,7 +5,7 @@ const envConfigFile = `
 export  const environment = { 
   production: true , 
   // o nome deve corresponder à(s) chave(s) de ambiente do Netlify
-   TMDB_API_KEY: ' ${process.env.TMDB_API_KEY} ' , 
+   TMDB_API_KEY: ' ${process.env.NG_APP_TMDB_API_KEY} ' , 
   
  }; 
 `; 
