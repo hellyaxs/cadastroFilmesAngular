@@ -25,3 +25,27 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Passo a Passo para Gerar um Token de Acesso no TMDB
+
+### 1. Crie uma Conta no TMDB
+
+- Acesse [The Movie Database](https://www.themoviedb.org).
+- Clique em "Sign Up" para criar uma nova conta.
+- Preencha os dados necessários e confirme seu e-mail.
+
+### 2. Obtenha sua Chave de API
+
+- Após fazer login, vá para a seção de configurações da sua conta.
+- Clique em "API" no menu.
+- Solicite uma chave de API preenchendo o formulário com as informações solicitadas.
+
+### 3. Gere um Token de Solicitação
+
+- Use a chave de API para fazer uma solicitação para gerar um token de solicitação. Execute a seguinte chamada de API:
+
+### 4. adicione o Token no arquivo de environment.ts
+
+- Adicione o token gerado no arquivo `environment.ts`
+
+`TMDB_API_KEY: 'SUA_CHAVE_DE_API_AQUI'`
