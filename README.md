@@ -1,4 +1,4 @@
-# NetflixClone
+# NetflixClone [![Netlify Status](https://api.netlify.com/api/v1/badges/3508310c-ad12-46d9-8b6a-04a41815ebb6/deploy-status)](https://app.netlify.com/sites/rainbow-chaja-a419e9/deploys)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
 
