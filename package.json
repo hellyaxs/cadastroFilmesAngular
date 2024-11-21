@@ -6,12 +6,14 @@
     "start": "ng serve",
     "start:dev": "ng serve --configuration=development",
     "start:prod": "ng serve --configuration=production",
+    "prebuild" :  "node set-env.js" , 
     "build": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
   "dependencies": {
+    "@angular-builders/custom-webpack": "^17.0.2",
     "@angular/animations": "^17.0.0",
     "@angular/common": "^17.0.0",
     "@angular/compiler": "^17.0.0",
